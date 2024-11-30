@@ -1,0 +1,151 @@
+{% extends "Base.html" %}
+{% load static %}
+
+{% block content %}
+<h1 >Women's Hoodies</h1>
+
+<section class="intro">
+    <p>Welcome to our Women's Hoodies Category! Explore our collection of fashionable and comfortable hoodies designed specifically for women. Whether you're looking for a cozy pullover or a trendy zip-up, we have something to suit every style and occasion.</p>
+</section>
+
+<section class="featured-products">
+    <h2>Featured Hoodies</h2>
+    <p><strong>Available in Size: Medium (M)</strong></p>
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="{% static 'images/W2.jpg' %}" alt="Women's Hoodie 1">
+            <h3>Cozy Pullover Hoodie</h3>
+            <p>$50</p>
+            <a href="{% url 'buy_now' 3 %}" class="btn btn-primary">Buy</a>
+            <a href="{% url 'add_to_cart' 3 %}" class="btn btn-secondary">Add to Cart</a>
+        </div>
+        <!-- Product 2 -->
+
+        <div class="product-card">
+            <img src="{% static 'images/W1.jpg' %}" alt="Women's Hoodie 2">
+            <h3>Chic Zip-Up Hoodie</h3>
+            <p>$60</p>
+            <a href="{% url 'buy_now' 4 %}" class="btn btn-primary">Buy</a>
+            <a href="{% url 'add_to_cart' 4 %}" class="btn btn-secondary">Add to Cart</a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="{% static 'images/W3.jpg' %}" alt="Women's Hoodie 3">
+            <h3>Graphic Design Hoodie</h3>
+            <p>$70</p>
+            <a href="{% url 'buy_now' 5 %}" class="btn btn-primary">Buy</a>
+            <a href="{% url 'add_to_cart' 5 %}" class="btn btn-secondary">Add to Cart</a>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <img src="{% static 'images/W6.jpg' %}" alt="Women's Hoodie 3">
+            <h3>Comfort Blend Hoodie</h3>
+            <p> $55</p>
+            <a href="{% url 'buy_now' 6 %}" class="btn btn-primary">Buy</a>
+            <a href="{% url 'add_to_cart' 6 %}" class="btn btn-secondary">Add to Cart</a>
+        </div>
+
+         <!-- Product 5 -->
+         <div class="product-card">
+            <img src="{% static 'images/W7.jpg' %}" alt="Women's Hoodie 3">
+            <h3>Urban Sport Hoodie</h3>
+            <p> $65</p>
+            <a href="{% url 'buy_now' 7 %}" class="btn btn-primary">Buy</a>
+            <a href="{% url 'add_to_cart' 7 %}" class="btn btn-secondary">Add to Cart</a>
+        </div>
+
+          <!-- Product 6 -->
+          <div class="product-card">
+            <img src="{% static 'images/W8.jpg' %}" alt="Women's Hoodie 3">
+            <h3>Vintage Wash Hoodie</h3>
+            <p> $60</p>
+            <a href="{% url 'buy_now' 8 %}" class="btn btn-primary">Buy</a>
+            <a href="{% url 'add_to_cart' 8 %}" class="btn btn-secondary">Add to Cart</a>
+        </div>
+
+         <!-- Product 7 -->
+         <div class="product-card">
+            <img src="{% static 'images/W9.jpg' %}" alt="Women's Hoodie 3">
+            <h3>Oversized Lounge Hoodie</h3>
+            <p> $70</p>
+            <a href="{% url 'buy_now' 9 %}" class="btn btn-primary">Buy</a>
+            <a href="{% url 'add_to_cart' 9 %}" class="btn btn-secondary">Add to Cart</a>
+        </div>
+
+         <!-- Product 8 -->
+         <div class="product-card">
+            <img src="{% static 'images/W10.jpg' %}" alt="Women's Hoodie 3">
+            <h3>Graphic Logo Hoodie</h3>
+            <p> $75</p>
+            <a href="{% url 'buy_now' 10 %}" class="btn btn-primary">Buy</a>
+            <a href="{% url 'add_to_cart' 10 %}" class="btn btn-secondary">Add to Cart</a>
+        </div>
+
+         <!-- Product 9 -->
+         <div class="product-card">
+            <img src="{% static 'images/W11.jpg' %}" alt="Women's Hoodie 3">
+            <h3> Eco-Friendly Hoodie</h3>
+            <p> $65</p>
+            <a href="{% url 'buy_now' 11 %}" class="btn btn-primary">Buy</a>
+            <a href="{% url 'add_to_cart' 11 %}" class="btn btn-secondary">Add to Cart</a>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="product-card">
+            <img src="{% static 'images/W12.jpg' %}" alt="Women's Hoodie 3">
+            <h3> Heathered Pullover Hoodie</h3>
+            <p> $58</p>
+            <a href="{% url 'buy_now' 12 %}" class="btn btn-primary">Buy</a>
+            <a href="{% url 'add_to_cart' 12 %}" class="btn btn-secondary">Add to Cart</a>
+        </div>
+
+        
+        <!-- Product 11 -->
+        <div class="product-card">
+            <img src="{% static 'images/W13.jpg' %}" alt="Women's Hoodie 3">
+            <h3> Athleisure Zip-Up Hoodie</h3>
+            <p> $65</p>
+            <a href="{% url 'buy_now' 13 %}" class="btn btn-primary">Buy</a>
+            <a href="{% url 'add_to_cart' 13 %}" class="btn btn-secondary">Add to Cart</a>
+        </div>
+
+
+         <!-- Product 12 -->
+         <div class="product-card">
+            <img src="{% static 'images/W14.jpg' %}" alt="Women's Hoodie 3">
+            <h3> Floral Print Hoodie</h3>
+            <p> $68</p>
+            <a href="{% url 'buy_now' 14 %}" class="btn btn-primary">Buy</a>
+            <a href="{% url 'add_to_cart' 14 %}" class="btn btn-secondary">Add to Cart</a>
+        </div>
+
+        <!-- Add more hoodies as needed -->
+    </div>
+</section>
+
+<section class="category-info-women">
+    <h2>Why Choose Our Women's Hoodies?</h2>
+    <p>Our women's hoodies offer a perfect blend of comfort and style. Crafted from high-quality materials, these hoodies are designed to keep you warm and looking great. Enjoy a range of designs from classic to trendy, all made with attention to detail. Plus, experience excellent customer service and hassle-free returns with every purchase.</p>
+    
+    <div class="shop-features-women">
+        <div class="feature-women">
+            <img src="{% static 'images/W4.jpg' %}" alt="Quality">
+            <h3>Exceptional Quality</h3>
+            <p>Crafted with premium fabrics to ensure long-lasting comfort and durability.</p>
+        </div>
+        <div class="feature-women">
+            <img src="{% static 'images/W5.jpg' %}" alt="Trendy">
+            <h3>Fashionable Designs</h3>
+            <p>Stay on trend with our collection of stylish and modern hoodie designs.</p>
+        </div>
+        <div class="feature-women">
+            <img src="{% static 'images/B2.jpg' %}" alt="Customer Service">
+            <h3>Outstanding Service</h3>
+            <p>Our dedicated team is here to provide you with exceptional support and service.</p>
+        </div>
+    </div>
+</section>
+{% endblock content %}

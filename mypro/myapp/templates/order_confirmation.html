@@ -1,0 +1,38 @@
+{% extends "Base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="order-confirmation-container">
+    <h2>Order Confirmed!</h2>
+    <p>Thank you for your purchase! Your order has been confirmed.</p>
+
+    <h3>Order Summary</h3>
+    <ul>
+        {% for item in order_items %}
+        <li>
+            <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" style="width: 100px;" class="product-image">
+
+            <div class="item-details">
+            <p>Product: {{ item.product.name }}</p>
+            <p>Price: ${{ item.product.price }}</p>
+            <p>Quantity: {{ item.quantity }}</p>
+            <p>Payment Status: {{ item.payment_status }}</p>
+            <p>Payment Method: {{ payment_method }}</p> 
+
+
+          </div>
+          
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div class="total">
+        <h3>Total Amount: ${{ total_amount }}</h3>
+    </div>
+
+    <h3>Shipping Details</h3>
+    <p>{{ shipping_address }}</p>
+
+    <a href="{% url 'shop' %}">Continue Shopping</a>
+</div>
+{% endblock %}

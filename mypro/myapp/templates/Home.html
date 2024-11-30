@@ -1,0 +1,206 @@
+{% extends "Base.html" %}
+
+{% load static %}
+<!-- {% block title %}
+BrandName - Home -->
+{% endblock title %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="{% static 'images/main.jpg' %}" alt="Hero Image">
+        <div class="hero-content">
+            <h1>Discover Your Perfect Hoodie with <span>HoodieHub</span></h1>
+            <p>Comfortable, stylish, and made for you.</p>
+            <a href="{% url 'shop' %}" class="btn btn-primary">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="{% static 'images/M1.jpg' %}" alt="Product 1">
+                <h3>Zip-Up Hoodie</h3>
+                <p>$69.99</p>
+                <a href="{% url 'shop' %}" class="btn">View Details</a>
+            </div>
+            <!-- Repeat for each product -->
+
+            <div class="product-card">
+                <img src="{% static 'images/W2.jpg' %}" alt="Product 1">
+                <h3>Cozy Pullover Hoodie</h3>
+                <p>$50.00</p>
+                <a href="{% url 'shop' %}" class="btn">View Details</a>
+            </div>
+
+
+
+            <div class="product-card">
+                <img src="{% static 'images/M2.jpg' %}" alt="Product 1">
+                <h3>Classic Pullover Hoodie</h3>
+                <p>$59.99</p>
+                <a href="{% url 'shop' %}" class="btn">View Details</a>
+            </div>
+
+
+            <div class="product-card">
+                <img src="{% static 'images/W1.jpg' %}" alt="Product 1">
+                <h3>Chic Zip-Up Hoodie</h3>
+                <p>$60.00</p>
+                <a href="{% url 'shop' %}" class="btn">View Details</a>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Collections/Shop by Category -->
+
+    <section class="collections">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <img src="{% static 'images/MM.jpg' %}" alt="Men">
+                <h3>Men</h3>
+                <a href="{% url 'men_category' %}" class="btn">Shop Now</a>
+            </div>
+
+
+            <div class="category-card">
+                <img src="{% static 'images/WW.jpg' %}" alt="Women">
+                <h3>Women</h3>
+                <a href="{% url 'women_category' %}" class="btn">Shop Now</a>
+            </div>
+
+
+            <!-- Repeat for each category -->
+        </div>
+    </section>
+
+
+
+
+    <!-- About Us -->
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>We at HoodieHub are dedicated to providing the best quality hoodies for everyone. Our story...</p>
+        <a href="{% url 'about_us' %}" class="btn">Learn More</a>
+    </section>
+
+
+
+
+    
+    <!-- Customer Reviews -->
+    <section class="reviews">
+        <h2>What Our Customers Say</h2>
+        <div class="review-carousel">
+            <div class="review-card">
+                <p class="review-text">"The best hoodie I've ever bought! Great quality and comfort."</p>
+                <p class="review-author">- Jane Doe</p>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">"Amazing service and speedy delivery. Will definitely buy again."</p>
+                <p class="review-author">- John Wik</p>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">"I love the design and fit of these hoodies. Highly recommend!"</p>
+                <p class="review-author">- Sarah Lee</p>
+            </div>
+            <!-- Repeat for each review -->
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Promotional Banners -->
+
+    <section class="promotions">
+        <div class="promotion-banner">
+            <h2>Summer Sale at HoodieHub: Up to 50% Off!</h2>
+            <a href="{% url 'shop' %}" class="btn">Shop Sale</a>
+        </div>
+    </section>
+
+
+
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for the latest news and exclusive offers.</p>
+        <form  method="post" onsubmit="showPopup(event)">
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="Your email">
+            <span id="error-message" class="error-message">Please enter your email address.</span>
+
+            <button type="submit" class="btn">Subscribe</button>
+        </form>
+    </section>
+
+
+    <!-- Instagram Feed -->
+
+    <section class="instagram-feed">
+        <h2>Follow Us on Instagram</h2>
+        <div class="instagram-grid">
+            <div class="instagram-post">
+                <img src="{% static 'images/M7.jpg' %}" alt="Instagram Post">
+            </div>
+
+            <div class="instagram-post">
+                <img src="{% static 'images/B2.jpg' %}" alt="Instagram Post">
+            </div>
+
+            <div class="instagram-post">
+                <img src="{% static 'images/In4.jpg' %}" alt="Instagram Post">
+            </div>
+
+            <div class="instagram-post">
+                <img src="{% static 'images/In3.jpg' %}" alt="Instagram Post">
+            </div>
+             
+        
+        </div>
+    </section>
+
+    <!-- Blog Highlights -->
+    <section class="blog-highlights">
+        <h2>From Our Blog</h2>
+        <div class="blog-grid">
+            <div class="blog-post">
+                <img src="{% static 'images/B1.jpg' %}" alt="How to Style Your Hoodie">
+                <h3>How to Style Your Hoodie for Any Occasion</h3>
+                <a href="https://www.bewakoof.com/blog/how-to-style-hoodies/" class="btn">Read More</a>
+            </div>
+    
+            <div class="blog-post">
+                <img src="{% static 'images/B2.jpg' %}" alt="Top 5 Hoodie Trends">
+                <h3>Top 5 Hoodie Trends This Season</h3>
+                <a href="https://www.lezhougarment.com/best-11-hoodie-design-trends-for-2024-elevate-your-style-game/" class="btn">Read More</a>
+            </div>
+    
+            <div class="blog-post">
+                <img src="{% static 'images/B3.jpg' %}" alt="Best Hoodies for Comfort">
+                <h3>The Best Hoodies for Comfort and Performance</h3>
+                <a href="https://www.esquire.com/style/mens-fashion/g3357/best-hoodies-men/" class="btn">Read More</a>
+            </div>
+
+            <!-- Repeat for each blog post -->
+        </div>
+    </section>
+{% endblock content %}

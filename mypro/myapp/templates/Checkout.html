@@ -1,0 +1,79 @@
+{% extends "Base.html" %}
+{% load static %}
+{% block content %}
+<div class="checkout-container">
+    <div class="order-summary">
+        <h2>Order Summary</h2>
+        <ul>
+            {% for item in order_items %}
+            <li>
+                <div class="item-boxx">
+                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="product-image">
+                    <div class="item-details">
+                        <p><strong>{{ item.product.name }}</strong></p>
+                        <span>{{ item.product.description }}</span>
+                        <p>Price: ${{ item.price }}</p>
+                        <p>Quantity: {{ item.quantity }}</p>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="total">
+            <h3>Total: ${{ total_amount }}</h3>
+        </div>
+    </div>
+
+    <div class="shipping-details">
+        <h2>Shipping Details</h2>
+        <form id="checkout-form"  method="post"   onsubmit="showOrderConfirmationAlert(event)" action="{% url 'confirm_order' %}">
+            {% csrf_token %}
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+
+            <label for="zip">Postal Code:</label>
+            <input type="text" id="zip" name="zip" required>
+
+             <!-- Hidden field for product_id -->
+           <input type="hidden" name="product_id" value="{{ order_items.0.product.id }}">
+
+           <label for="quantity">Quantity:</label>
+           <input type="number" id="quantity" name="quantity"  value="{{ quantity }}" min="1" required>
+
+           <h3>Select Payment Method:</h3>
+           
+           <div class="payment-method">
+             <input type="radio" id="cod" name="payment_method" value="COD">
+               <label for="cod">  Cash on Delivery</label>
+           </div>
+           
+           <div class="payment-method">
+              <input type="radio" id="gpay" name="payment_method" value="GPay">
+               <label for="gpay">GPay</label>
+           </div>
+           
+           <div class="payment-method">
+               <input type="radio" id="phonepe" name="payment_method" value="PhonePe">
+               <label for="phonepe">PhonePe</label>
+           </div>
+           
+           <div class="payment-method">
+            <input type="radio" id="card" name="payment_method" value="Card">
+               <label for="card">Credit/Debit Card</label>
+           </div>
+           
+
+
+            <button type="submit">Confirm Order</button>
+        </form>
+       
+    </div>
+</div>
+{% endblock %}
+<script src="{% static 'JS/Scripts.js' %}"></script>

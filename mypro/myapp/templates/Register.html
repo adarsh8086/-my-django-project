@@ -1,0 +1,18 @@
+{% extends "Base.html" %}
+
+{% block title %}
+Register - HoodieHub
+{% endblock title %}
+
+{% block content %}
+<section class="registration-form">
+    <div class="container">
+        <h1>Register</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% extends "Base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="categories container section">
+    <div class="secHeader">
+        <span>Browse by Category</span>
+        <h2>Shop by Category</h2>
+    </div>
+
+    <div class="category-grid">
+        <div class="category-card">
+            <img src="{% static 'images/M7.jpg' %}" alt="Men">
+            <h3>Men</h3>
+            <a href="{% url 'men_category' %}" class="btn btn-primary">Shop Now</a>
+        </div>
+
+        <div class="category-card">
+            <img src="{% static 'images/B2.jpg' %}" alt="Women">
+            <h3>Women</h3>
+            <a href="{% url 'women_category' %}" class="btn btn-primary">Shop Now</a>
+        </div>
+
+       
+    </div>
+</div>
+{% endblock content %}

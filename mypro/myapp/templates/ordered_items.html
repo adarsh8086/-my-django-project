@@ -1,0 +1,54 @@
+{% extends "Base.html" %}
+{% load static %}
+{% block content %}
+<div class="ordered-items-container">
+    <h2>Your Ordered Items</h2>
+    
+    <!-- Clear All Orders Form -->
+    {% if orders %}
+    <form method="post" action="{% url 'clear_orders' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn" id="c">Clear All Orders</button>
+    </form>
+    
+    <!-- Loop through Orders -->
+    {% for order in orders %}
+        <div class="order">
+            <h3>Order ID: {{ order.id }}</h3>
+            <p>Total Amount: ${{ order.total_amount }}</p>
+            <p>Shipping Address: {{ order.shipping_address }}</p>
+
+            <!-- List of Order Items -->
+            <ul>
+                {% for purchase in order.purchases.all %}
+                <li>
+                    <img src="{{ purchase.product.image.url }}" alt="{{ purchase.product.name }}" class="product-image">
+                    <div class="item-details">
+                        <p><strong>Product:</strong> {{ purchase.product.name }}</p>
+                        <p><strong>Price:</strong> ${{ purchase.product.price }}</p>
+                        <p><strong>Quantity:</strong> {{ purchase.quantity }}</p>
+                        <p><strong>Order Date:</strong> {{ purchase.purchase_date|date:"F j, Y, g:i a" }}</p>
+                        <p><strong>Payment Method:</strong> {{ order.payment_method }}</p> 
+             
+
+
+                       
+                            
+                            <form method="post" action="{% url 'cancel_last_order' order.id %}" onsubmit="return confirmCancel()" data-order-date="{{ purchase.purchase_date|date:'Y-m-d H:i:s' }}"  class="cancel-order-form">
+
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-warning cancel-button">Cancel Booking</button>
+                        </form>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+    
+    {% else %}
+        <p>You have no orders yet.</p>
+    {% endif %}
+</div>
+{% endblock %}
+<script src="{% static 'JS/Scripts.js' %}"></script>

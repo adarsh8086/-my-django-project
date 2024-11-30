@@ -1,0 +1,157 @@
+{% extends "Base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="category-page container section">
+    <h1>Men's Hoodies</h1>
+    
+    <section class="intro">
+        <p>Welcome to our Men's Hoodies Category! Discover our collection of stylish and comfortable hoodies. Whether you're looking for a casual everyday hoodie or something with a bit more flair, we have a variety of options for every taste.</p>
+    </section>
+    
+    <section class="featured-products">
+        <h2>Featured Hoodies</h2>
+        <p><strong>Available in Size: Medium (M)</strong></p>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="{% static 'images/M2.jpg' %}" alt="Men's Hoodie 1">
+                <h3>Classic Pullover Hoodie</h3>
+                <p>$59.99</p>
+
+                <a href="{% url 'buy_now' 1 %}" class="btn btn-primary">Buy</a>
+                <a href="{% url 'add_to_cart' 1 %}" class="btn btn-secondary">Add to Cart</a>
+          </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="{% static 'images/M1.jpg' %}" alt="Men's Hoodie 2"> 
+                <h3>Zip-Up Hoodie</h3>
+                <p>$69.99</p>
+                <a href="{% url 'buy_now' 2 %}" class="btn btn-primary">Buy</a>
+                <a href="{% url 'add_to_cart' 2 %}" class="btn btn-secondary">Add to Cart</a>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="{% static 'images/M3.jpg' %}" alt="Men's Hoodie 3">
+                <h3>Graphic Print Hoodie</h3>
+                <p>$79.99</p>
+                <a href="{% url 'buy_now' 23 %}" class="btn btn-primary">Buy</a>
+                <a href="{% url 'add_to_cart' 23 %}" class="btn btn-secondary">Add to Cart</a>  
+          </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                  <img src="{% static 'images/M4.jpg' %}" alt="Men's Hoodie 4">
+                  <h3>Fleece-Lined Hoodie</h3>
+                  <p>$79.99</p>
+                  <a href="{% url 'buy_now' 24 %}" class="btn btn-primary">Buy</a>
+                  <a href="{% url 'add_to_cart' 24 %}" class="btn btn-secondary">Add to Cart</a>
+          </div>
+
+           <!-- Product 5 -->
+           <div class="product-card">
+            <img src="{% static 'images/M5.jpg' %}" alt="Men's Hoodie 4">
+            <h3>Athletic Performance Hoodie</h3>
+            <p>$69</p>
+            <a href="{% url 'buy_now' 15 %}" class="btn btn-primary">Buy</a>
+            <a href="{% url 'add_to_cart' 15 %}" class="btn btn-secondary">Add to Cart</a>
+          </div>
+           
+           
+             <!-- Product 6 -->
+             <div class="product-card">
+                <img src="{% static 'images/M6.jpg' %}" alt="Men's Hoodie 4">
+                <h3> Hooded Sweatshirt</h3>
+                <p>$54</p>
+                <a href="{% url 'buy_now' 16 %}" class="btn btn-primary">Buy</a>
+                <a href="{% url 'add_to_cart' 16 %}" class="btn btn-secondary">Add to Cart</a>
+              </div>
+
+
+               <!-- Product 7 -->
+             <div class="product-card">
+                <img src="{% static 'images/M8.jpg' %}" alt="Men's Hoodie 4">
+                <h3> Vintage Colorblock Hoodie</h3>
+                <p>$74</p>
+                <a href="{% url 'buy_now' 17 %}" class="btn btn-primary">Buy</a>
+                <a href="{% url 'add_to_cart' 17 %}" class="btn btn-secondary">Add to Cart</a>
+              </div>
+
+
+                <!-- Product 8 -->
+             <div class="product-card">
+                <img src="{% static 'images/M9.jpg' %}" alt="Men's Hoodie 4">
+                <h3> Sherpa Fleece Hoodie</h3>
+                <p>$89</p>
+                <a href="{% url 'buy_now' 18 %}" class="btn btn-primary">Buy</a>
+                <a href="{% url 'add_to_cart' 18 %}" class="btn btn-secondary">Add to Cart</a>
+              </div>
+              
+
+               <!-- Product 9 -->
+             <div class="product-card">
+                <img src="{% static 'images/M10.jpg' %}" alt="Men's Hoodie 4">
+                <h3> Tech-Enhanced Hoodie</h3>
+                <p>$79</p>
+                <a href="{% url 'buy_now' 19 %}" class="btn btn-primary">Buy</a>
+                <a href="{% url 'add_to_cart' 19 %}" class="btn btn-secondary">Add to Cart</a>
+              </div>
+
+
+              <!-- Product 10 -->
+            <div class="product-card">
+              <img src="{% static 'images/M11.jpg' %}" alt="Men's Hoodie 5">
+              <h3>Outdoor Adventure Hoodie</h3>
+              <p>$84.99</p>
+              <a href="{% url 'buy_now' 20 %}" class="btn btn-primary">Buy</a>
+              <a href="{% url 'add_to_cart' 20 %}" class="btn btn-secondary">Add to Cart</a>
+            </div>
+
+            <!-- Product 11 -->
+            <div class="product-card">
+              <img src="{% static 'images/M12.jpg' %}" alt="Men's Hoodie 6">
+              <h3>Thermal Insulated Hoodie</h3>
+              <p>$94.99</p>
+              <a href="{% url 'buy_now' 21 %}" class="btn btn-primary">Buy</a>
+              <a href="{% url 'add_to_cart' 21 %}" class="btn btn-secondary">Add to Cart</a>
+            </div>
+
+            <!-- Product 12 -->
+            <div class="product-card">
+              <img src="{% static 'images/M13.jpg' %}" alt="Men's Hoodie 7">
+              <h3>Eco-Friendly Recycled Hoodie</h3>
+              <p>$89.99</p>
+              <a href="{% url 'buy_now' 22 %}" class="btn btn-primary">Buy</a>
+              <a href="{% url 'add_to_cart' 22 %}" class="btn btn-secondary">Add to Cart</a>
+            </div>
+
+            <!-- Add more hoodies as needed -->
+        </div>
+    </section>
+    
+    <section class="category-info">
+        <h2>Why Choose Our Hoodies?</h2>
+        <p>Our men's hoodies are designed for both comfort and style. Made from high-quality materials, our hoodies are perfect for any occasion. Enjoy features like durable fabrics, trendy designs, and a range of colors to match your style. Experience top-notch customer service, easy returns, and fast shipping with every purchase.</p>
+        
+        <div class="shop-features">
+            <div class="feature">
+                <img src="{% static 'images/M2.jpg' %}" alt="Quality">
+                <h3>Premium Quality</h3>
+                <p>Crafted from the finest materials to ensure long-lasting comfort and style.</p>
+            </div>
+            <div class="feature">
+                <img src="{% static 'images/M4.jpg' %}" alt="Trendy">
+                <h3>Fashionable Designs</h3>
+                <p>Stay on trend with our modern and stylish hoodie designs.</p>
+            </div>
+            <div class="feature">
+                <img src="{% static 'images/M1.jpg' %}" alt="Customer Service">
+                <h3>Exceptional Service</h3>
+                <p>Our dedicated support team is here to help with any questions or concerns.</p>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock content %}

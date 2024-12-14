@@ -8,7 +8,7 @@ HoodieHub is an e-commerce platform built with Django, designed to sell a variet
 ## 🛠️ **Technologies Used**
 
 - **Backend:** Django
-- **Frontend:** HTML, CSS  ,JavaScript
+- **Frontend:** HTML, CSS,  JavaScript
 - **Database:** SQLite
 
 ---

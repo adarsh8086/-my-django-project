@@ -25,9 +25,11 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run migrations
+        working-directory: mypro
         run: |
           python mypro/manage.py migrate
 
       - name: Run tests
+        working-directory: mypro
         run: |
           python mypro/manage.py test --verbosity=2

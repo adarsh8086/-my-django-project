@@ -1,0 +1,25 @@
+# Virtual Environment
+env/
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Database
+db.sqlite3
+
+# Static files
+staticfiles/
+
+# Media files 
+media/
+
+mypro/mypro/settings.py
+
+# Environment variables
+.env
+

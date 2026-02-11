@@ -27,9 +27,11 @@ jobs:
       - name: Run migrations
         working-directory: mypro
         run: |
-          python mypro/manage.py migrate
+          export PYTHONPATH=$(pwd):$PYTHONPATH
+          python manage.py migrate
 
       - name: Run tests
         working-directory: mypro
         run: |
-          python mypro/manage.py test --verbosity=2
+          export PYTHONPATH=$(pwd):$PYTHONPATH
+          python manage.py test --verbosity=2

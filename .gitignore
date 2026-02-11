@@ -1,4 +1,6 @@
-# Virtual Environment
+# ========================
+# Virtual Environments
+# ========================
 mypro/env/
 mypro/venv/
 mypro/.venv/
@@ -6,24 +8,40 @@ env/
 venv/
 .venv/
 
-# Python
-mypro/__pycache__/
+# ========================
+# Python Cache
+# ========================
+__pycache__/
 *.pyc
 *.pyo
 *.pyd
 
+# ========================
 # Database
+# ========================
 mypro/db.sqlite3
 
-# Static files
-mypro/staticfiles/
-
-# Media files 
+# ========================
+# Static & Media files
+# ========================
+mypro/myapp/static/
+mypro/product_images/
 mypro/media/
 
-# Django settings
+# ========================
+# Django settings & secrets
+# ========================
 mypro/mypro/settings.py
-
-# Environment variables
 mypro/.env
 
+# ========================
+# VS Code
+# ========================
+.vscode/
+
+# ========================
+# Docker
+# ========================
+.dockerignore
+Dockerfile
+docker-compose.yml

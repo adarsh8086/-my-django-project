@@ -1,25 +1,29 @@
 # Virtual Environment
+mypro/env/
+mypro/venv/
+mypro/.venv/
 env/
 venv/
 .venv/
 
 # Python
-__pycache__/
+mypro/__pycache__/
 *.pyc
 *.pyo
 *.pyd
 
 # Database
-db.sqlite3
+mypro/db.sqlite3
 
 # Static files
-staticfiles/
+mypro/staticfiles/
 
 # Media files 
-media/
+mypro/media/
 
+# Django settings
 mypro/mypro/settings.py
 
 # Environment variables
-.env
+mypro/.env
 
